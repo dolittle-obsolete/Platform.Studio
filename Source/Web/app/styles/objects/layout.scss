@@ -1,0 +1,24 @@
+.main-header {
+    @extend %flex-container-horizontal;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-brand-dark-blue;
+    height: 6rem;
+    padding: $grid-gutter/2 $grid-gutter;
+    h1 {
+        margin: 0;
+    }
+    .site-logo {
+        display: block;
+        height: 100%;
+        img,
+        svg {
+            max-height: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.page-content {
+    padding: $grid-gutter;
+}

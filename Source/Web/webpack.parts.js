@@ -1,10 +1,6 @@
-const path = require('path');
-
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-const nodeModulesDir = path.resolve(__dirname, 'node_modules');
 
 let sassBuilder = new ExtractTextPlugin({
     filename: "[name].[hash:5].bundle.css",
@@ -15,6 +11,7 @@ module.exports = {
     loaders: {
         htmlLoader: {
             test: /\.html$/,
+            exclude: /layout.html/,
             use: [
                 {
                     loader: 'html-loader',
@@ -60,19 +57,17 @@ module.exports = {
                 }
             }
             ]
-        },
-        babelLoader: {
-            test: /\.js$/i,
-            loader: 'babel-loader',
-            exclude: nodeModulesDir,
-            options: {},
         }
     },
     plugins: {
         cleanDistFolder: new CleanWebpackPlugin(["dist/*"]),
         buildHtmlIndex: new HtmlWebpackPlugin({
-            template: "./app/layout.ejs",
+            template: "./app/layout.html",
             filename: "index.html"
+        }),
+        buildHtmlSecond: new HtmlWebpackPlugin({
+            template: "./app/layout.html",
+            filename: "secondpage/index.html"
         }),
         sassBuilder: sassBuilder
     }
