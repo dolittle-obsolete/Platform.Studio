@@ -11,7 +11,7 @@ module.exports = {
     loaders: {
         htmlLoader: {
             test: /\.html$/,
-            exclude: /layout.html/,
+            exclude: /layout/,
             use: [
                 {
                     loader: 'html-loader',
@@ -62,12 +62,12 @@ module.exports = {
     plugins: {
         cleanDistFolder: new CleanWebpackPlugin(["dist/*"]),
         buildHtmlIndex: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
+            template: "./app/layout-header.html",
             filename: "index.html"
         }),
-        buildHtmlSecond: new HtmlWebpackPlugin({
-            template: "./app/layout.html",
-            filename: "secondpage/index.html"
+        buildHtmlBoundedContext: new HtmlWebpackPlugin({
+            template: "./app/layout-leftmenu.html",
+            filename: "bounded-context/index.html"
         }),
         sassBuilder: sassBuilder
     }

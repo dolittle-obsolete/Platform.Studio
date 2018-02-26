@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    ${require('./head-content.html')}
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>Dolittle Studio</h1>
+    </header>
+    <main class="main-content">
+        ${require('./pages/' + htmlWebpackPlugin.options.filename)}
+    </main>
+    <figure class="site-logo">
+        ${require('./assets/images/dolittle_symbol_white.svg')}
+    </figure>
+</body>
+
+</html>

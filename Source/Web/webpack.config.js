@@ -21,6 +21,7 @@ module.exports = [{
     plugins: [
         configParts.plugins.cleanDistFolder,
         configParts.plugins.buildHtmlIndex,
+        configParts.plugins.buildHtmlBoundedContext,
         configParts.plugins.sassBuilder
     ],
     devServer: {
