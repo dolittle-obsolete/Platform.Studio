@@ -68,6 +68,10 @@ module.exports = {
         buildHtmlBoundedContext: new HtmlWebpackPlugin({
             template: "./app/layout-leftmenu.html",
             filename: "bounded-context/index.html"
+        }),        
+        buildHtmlBuild: new HtmlWebpackPlugin({
+            template: "./app/layout-leftmenu.html",
+            filename: "bounded-context/build/index.html"
         }),
         sassBuilder: sassBuilder
     }

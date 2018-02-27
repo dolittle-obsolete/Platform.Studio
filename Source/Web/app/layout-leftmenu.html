@@ -5,25 +5,27 @@
     ${require('./head-content.html')}
 </head>
 
-<body>
+<body class="left-menu">
     <nav class="app-nav">
+        <a href="/" class="back-link">Applications</a>
         <header>
-            <h1>
-                Build
-            </h1>
             <figure>
                 ${require('./assets/icons/brick.svg')}
             </figure>
+            <div class="text">
+                <h1>
+                    Build
+                </h1>
+            </div>
         </header>
         ${require('./components/actionmenu/action-menu.html')}
     </nav>
     <main class="main-content">
         ${require('./pages/' + htmlWebpackPlugin.options.filename)}
+        <figure class="site-logo">
+            ${require('./assets/images/dolittle_symbol_white.svg')}
+        </figure>
     </main>
-    <figure class="site-logo">
-        ${require('./assets/images/dolittle_symbol_white.svg')}
-    </figure>
-
 </body>
 
 </html>
