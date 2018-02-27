@@ -5,7 +5,7 @@
     ${require('./head-content.html')}
 </head>
 
-<body class="left-menu">
+<body class="with-left-menu">
     <nav class="app-nav">
         <a href="/" class="back-link">Applications</a>
         <header>
@@ -22,9 +22,9 @@
     </nav>
     <main class="main-content">
         ${require('./pages/' + htmlWebpackPlugin.options.filename)}
-        <figure class="site-logo">
+        <a href="/" class="site-logo">
             ${require('./assets/images/dolittle_symbol_white.svg')}
-        </figure>
+        </a>
     </main>
 </body>
 

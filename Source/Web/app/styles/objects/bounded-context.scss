@@ -1,0 +1,43 @@
+.bounded-context {
+    @extend %flex-container;
+    padding: $grid-gutter*3 $grid-gutter;
+    >.content-box {
+        flex: 1 0 20rem;
+        box-shadow: .25rem .25rem 0 $color-brand-yellow;
+        h1 {
+            border-bottom: 0.0625rem solid #ccc;
+        }
+        dl {
+            @extend %flex-container;
+            flex-wrap: wrap;
+            line-height: 2rem;
+            dt {
+                flex: 1 1 10rem;
+                text-align: right;
+            }
+            dd {
+                flex: 1 1 10rem;
+                
+            }
+            .yay {
+                color: transparent;
+                text-shadow: 0 0 0 green;
+            }
+            .nay {
+                color: transparent;
+                text-shadow: 0 0 0 red;
+            }
+            &.uptime-status {
+                letter-spacing: .125rem;
+                strong {
+                    text-transform: uppercase;
+                    margin-left: .125rem;
+                }
+                dd {
+                    font-size: 2rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

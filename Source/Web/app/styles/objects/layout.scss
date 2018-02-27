@@ -1,5 +1,5 @@
 body {
-    &.left-menu {
+    &.with-left-menu {
         @extend %flex-container-horizontal;
         flex-direction: row;
     }
@@ -72,4 +72,10 @@ body {
 
 .page-content {
     padding: $grid-gutter;
+}
+
+.content-box {
+    background-color: #333;
+    padding: $grid-gutter;
+    margin: $grid-gutter;
 }
