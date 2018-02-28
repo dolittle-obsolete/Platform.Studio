@@ -13,10 +13,15 @@
         }
         small {
             color: #bbb;
+            &.commit-details {
+                flex: 0 1 25rem;
+            }
+            &.build-time {
+                margin-left: auto;
+            }
         }
         .row {
             @extend %flex-container;
-            justify-content: space-between;
             &.top {
                 margin-bottom: $grid-gutter/2;
             }

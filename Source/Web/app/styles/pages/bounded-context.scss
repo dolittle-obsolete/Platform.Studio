@@ -20,21 +20,35 @@
             dd {
                 font-size: 2rem;
                 font-weight: 300;
-                text-indent: 1rem;
+                text-align: center;
+            }
+            .yay,
+            .nay {
+                border-radius: .1875rem;
+                font-size: .75rem;
+                line-height: 1rem;
+                padding: .25rem .5rem;
+                text-transform: uppercase;
+                color: #222;
             }
             .yay {
-                color: transparent;
-                text-shadow: 0 0 0 green;
+                background-color: chartreuse;
             }
             .nay {
-                color: transparent;
-                text-shadow: 0 0 0 red;
+                background-color: orangered;
             }
             &.uptime-status {
                 letter-spacing: .125rem;
                 strong {
                     text-transform: uppercase;
                     margin-left: .125rem;
+                }
+            }
+            &.app-status {
+                dd {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end
                 }
             }
         }

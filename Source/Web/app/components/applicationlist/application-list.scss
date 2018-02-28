@@ -16,7 +16,7 @@
             padding: $grid-gutter;
             text-align: center;
             &:hover {
-                box-shadow: 0 0 2rem $color-brand-yellow;
+                outline: solid .125rem $color-brand-yellow;
             }
         }
         figure {
