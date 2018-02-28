@@ -3,21 +3,24 @@
     padding: $grid-gutter*3 $grid-gutter;
     >.content-box {
         flex: 1 0 20rem;
-        box-shadow: .25rem .25rem 0 $color-brand-yellow;
         h1 {
             border-bottom: 0.0625rem solid #ccc;
         }
         dl {
             @extend %flex-container;
             flex-wrap: wrap;
-            line-height: 2rem;
-            dt {
-                flex: 1 1 10rem;
-                text-align: right;
-            }
+            line-height: 3rem;
+            dt,
             dd {
                 flex: 1 1 10rem;
-                
+                border-bottom: .0625rem dotted #ccc;
+                padding: .25rem;
+            }
+            dt {}
+            dd {
+                font-size: 2rem;
+                font-weight: 300;
+                text-indent: 1rem;
             }
             .yay {
                 color: transparent;
@@ -32,10 +35,6 @@
                 strong {
                     text-transform: uppercase;
                     margin-left: .125rem;
-                }
-                dd {
-                    font-size: 2rem;
-                    font-weight: 300;
                 }
             }
         }

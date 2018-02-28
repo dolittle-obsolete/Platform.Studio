@@ -1,0 +1,33 @@
+.build-app {
+    h1 {
+        text-align: center;
+    }
+    .build-details {
+        @extend %flex-container-vertical;
+        padding: $grid-gutter*1.5 0;
+        a {
+            color: #fff;
+            font-size: 1rem;
+            max-width: 70%;
+            ;
+        }
+        small {
+            color: #bbb;
+        }
+        .row {
+            @extend %flex-container;
+            justify-content: space-between;
+            &.top {
+                margin-bottom: $grid-gutter/2;
+            }
+        }
+    }
+    .build-list {
+        .build-details {
+            border-top: .0625rem solid #ccc;
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 body {
     &.with-left-menu {
         @extend %flex-container-horizontal;
-        flex-direction: row;
+        padding-left: 15rem;
     }
 }
 
@@ -18,11 +18,13 @@ body {
 }
 
 .app-nav {
-    width: 15rem;
+    position: fixed;
     height: 100vh;
-    max-width: 30vw;
     background-color: $color-brand-dark-blue;
     letter-spacing: 0.1875rem;
+    flex: 0 0 15rem;
+    left: 0;
+    top: 0;
     h1 {
         margin: 0 0 0 $grid-gutter;
         font-size: 1.3rem;
@@ -57,6 +59,10 @@ body {
     }
 }
 
+.main-content {
+    flex: 1 1 auto;
+}
+
 .site-logo {
     display: block;
     position: fixed;
@@ -78,4 +84,11 @@ body {
     background-color: #333;
     padding: $grid-gutter;
     margin: $grid-gutter;
+    box-shadow: .25rem .25rem 0 #232323;
+}
+
+.centered-app {
+    @extend %fixed-width-at-desktop;
+    margin: 0 auto;
+    padding: $grid-gutter;
 }
