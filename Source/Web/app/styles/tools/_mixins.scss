@@ -1,7 +1,0 @@
-// Targets IE10 and IE11 specifically
-// See http://philipnewcomer.net/2014/04/target-internet-explorer-10-11-css/
-@mixin ie {
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        @content;
-    }
-}

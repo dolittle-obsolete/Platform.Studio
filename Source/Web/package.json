@@ -1,33 +1,24 @@
 {
-  "name": "dolittle-studio",
-  "version": "0.0.1",
-  "description": "The Studio Portal for Dolittle and their customers",
-  "repository": "https://github.com/dolittle-platform/Studio",
-  "private": true,
-  "main": "app/index.js",
+  "name": "sentry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "karma.conf.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "./run.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "clean-webpack-plugin": "^0.1.18",
-    "css-loader": "^0.28.10",
-    "dolittle.styles": "git+ssh://git@github.com:dolittle/Dolittle.styles.git",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.9",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^2.30.1",
-    "node-sass": "^4.7.2",
-    "path": "^0.12.7",
-    "postcss-loader": "^2.1.0",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.20.2",
-    "svg-inline-loader": "^0.8.0",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.0"
+    "dolittle.javascript.build": "https://github.com/dolittle/JavaScript.Build.git",
+    "dolittle.javascript.build.aurelia": "https://github.com/dolittle-interaction/JavaScript.Build.Aurelia.git",
+    "dolittle.styles": "https://github.com/dolittle/dolittle.styles.git"
+  },
+  "dependencies": {
+    "@dolittle/commands": "^1.0.5",
+    "@dolittle/core": "^1.0.2",
+    "@dolittle/queries": "^1.0.6",
+    "aurelia-http-client": "^1.2.1",
+    "aurelia-open-id-connect": "^1.0.3"
   }
 }
