@@ -12,7 +12,7 @@ namespace Web
     /// <summary>
     /// 
     /// </summary>
-    public class Program
+    public class program
     {
         /// <summary>
         /// 

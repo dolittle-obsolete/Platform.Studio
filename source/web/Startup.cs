@@ -65,7 +65,6 @@ namespace Web
 
             services.AddSentry(_hostingEnvironment, "508c1745-5f2a-4b4c-b7a5-2fbb1484346d", "Studio", "94526bfb-719c-44cd-ad33-cfba77a60c2e");
 
-            while(!System.Diagnostics.Debugger.IsAttached);
             _bootResult = services.AddDolittle();
         }
 

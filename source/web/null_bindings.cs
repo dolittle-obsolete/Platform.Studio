@@ -19,7 +19,7 @@ namespace Web
     /// <summary>
     /// 
     /// </summary>
-    public class NullBindings : ICanProvideBindings
+    public class null_bindings : ICanProvideBindings
     {
         /// <inheritdoc/>
         public void Provide(IBindingProviderBuilder builder)

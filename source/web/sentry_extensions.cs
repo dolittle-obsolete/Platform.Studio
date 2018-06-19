@@ -12,7 +12,7 @@ namespace Web
     /// <summary>
     /// 
     /// </summary>
-    public static class SentryExtensions
+    public static class sentry_extensions
     {
         /// <summary>
         /// 
