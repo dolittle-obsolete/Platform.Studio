@@ -96,7 +96,7 @@ namespace Web
                 });
             }
 
-            app.UseSentry(env);
+        //    app.UseSentry(env);
 
             app.UseDefaultFiles();
             app.UseStaticFiles();

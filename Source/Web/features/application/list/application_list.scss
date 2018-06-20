@@ -1,6 +1,8 @@
+@import '../../../styles/Settings/all';
+@import '../../../styles/Tools/all';
 .application-page {
     @extend %flex-container-vertical-center;
-    >ul {
+    > ul {
         @extend %flex-container-horizontal-center;
         flex-wrap: wrap;
         li {
@@ -16,11 +18,11 @@
             padding: $grid-gutter;
             text-align: center;
             &:hover {
-                outline: solid .125rem $color-brand-yellow;
+                outline: solid 0.125rem $color-brand-yellow;
             }
         }
         figure {
-            padding: $grid-gutter*2;
+            padding: $grid-gutter * 2;
         }
     }
 }

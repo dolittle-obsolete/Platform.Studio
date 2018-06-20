@@ -3,9 +3,9 @@
         <h1>Dolittle Studio</h1>
     </header>
     <main class="main-content">
-        ${require('./pages/' + htmlWebpackPlugin.options.filename)}
+        <slot></slot>
     </main>
     <a href="/" class="site-logo">
-        ${require('./assets/images/dolittle_symbol_white.svg')}
-    </a>    
+        <img src="../assets/images/dolittle_symbol_white.svg" alt="Dolittle symbol">
+    </a>
 </template>
