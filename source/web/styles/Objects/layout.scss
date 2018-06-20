@@ -10,48 +10,6 @@
     }
 }
 
-.app-nav {
-    position: fixed;
-    height: 100vh;
-    background-color: $color-brand-dark-blue;
-    letter-spacing: 0.1875rem;
-    flex: 0 0 15rem;
-    left: 0;
-    top: 0;
-    h1 {
-        margin: 0 0 0 $grid-gutter;
-        font-size: 1.3rem;
-    }
-    .back-link {
-        background-color: $color-brand-light-blue;
-        color: $color-brand-dark-blue;
-        display: block;
-        padding: $grid-gutter;
-        color: #fff;
-        text-transform: uppercase;
-        &::before {
-            content: "<";
-            margin-right: $grid-gutter/2;
-        }
-    }
-    header {
-        @extend %flex-container-horizontal-center;
-        padding: $grid-gutter;
-        background-color: $color-brand-grey;
-        figure {
-            flex: 0 0 3rem;
-            svg path {
-                fill: #fff;
-            }
-        }
-        .text {
-            flex: 1 1 12rem;
-            display: flex;
-            align-items: center;
-        }
-    }
-}
-
 .main-content {
     flex: 1 1 auto;
 }
