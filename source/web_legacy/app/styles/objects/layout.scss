@@ -44,7 +44,7 @@ body {
     header {
         @extend %flex-container-horizontal-center;
         padding: $grid-gutter;
-        background-color: $color-brand-grey;
+        background-color: $color-brand-gray;
         figure {
             flex: 0 0 3rem;
             svg path {

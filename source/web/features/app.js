@@ -8,7 +8,7 @@ export class app {
         config.options.pushState = true;
         config.map([
             { route: ['', 'home'], name: 'index', moduleId: PLATFORM.moduleName('home/index'), layoutView: PLATFORM.moduleName('layout_landing.html') },
-            { route: 'application', name: 'application', moduleId: PLATFORM.moduleName('application/application') }
+            { route: 'applications', name: 'applications', moduleId: PLATFORM.moduleName('applications/index') }
         ]);
 
         this.router = router;

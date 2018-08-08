@@ -20,18 +20,18 @@
         color: #fff;
         text-transform: uppercase;
         &::before {
-            content: "<";
+            content: '<';
             margin-right: $grid-gutter/2;
         }
     }
     header {
         @extend %flex-container-horizontal-center;
         padding: $grid-gutter;
-        background-color: $color-brand-grey;
+        background-color: $color-brand-gray;
         figure {
             flex: 0 0 3rem;
-            svg path {
-                fill: #fff;
+            img {
+                filter: brightness(100%) saturate(0%);
             }
         }
         .text {

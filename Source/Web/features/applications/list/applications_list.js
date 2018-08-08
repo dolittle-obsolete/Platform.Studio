@@ -1,8 +1,8 @@
 import {customElement, containerless} from 'aurelia-framework';
 
-@customElement('application-list')
+@customElement('applications-list')
 @containerless()
-export class application_list {
+export class applications_list {
 
 
 }
