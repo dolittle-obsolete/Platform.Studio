@@ -1,0 +1,13 @@
+@import '../../styles/Settings/all';
+@import '../../styles/Tools/all';
+
+.welcome {
+    @extend %fixed-width-at-desktop;
+    min-height: 40vh;
+    margin: $grid-gutter*10 auto;
+    padding: $grid-gutter * 2;
+    /*temporary until styles upgrade to 2.9.1*/
+    &::after {
+        background-color: $acrylic-bg-color;
+    }
+}

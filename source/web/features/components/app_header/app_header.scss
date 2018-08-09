@@ -1,12 +1,17 @@
 @import '../../../styles/Settings/all.scss';
 @import '../../../styles/Tools/all.scss';
 
+
 .app_header {
     @extend %flex-container-horizontal;
     justify-content: space-between;
     align-items: center;
     background-color: $color-gray-darkest;
-    height: 3rem;
+    height: $app_header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     .site_logo {
         display: block;
         height: 1.75rem;
@@ -21,7 +26,7 @@
         display: flex;
         a {
             display: block;
-            padding: 0.625rem 1rem;
+            padding: $app_header-link-padding;
         }
     }
 }

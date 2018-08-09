@@ -1,12 +1,8 @@
 <template>
     <require from="./layout.scss"></require>
-    <div class="with-left-menu">
-        <side-bar></side-bar>
-        <main class="main-content">
-            <slot></slot>
-            <a class="site-logo">
-                <img src="../assets/images/dolittle_symbol_white.svg" alt="Dolittle symbol">
-            </a>
-        </main>
-    </div>
+    <app-header></app-header>
+    <side-bar></side-bar>
+    <main class="main-content">
+        <slot></slot>
+    </main>
 </template>
