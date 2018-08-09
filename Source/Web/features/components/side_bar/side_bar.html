@@ -1,9 +1,10 @@
 <template>
     <require from="./side_bar.scss"></require>
-    <nav class="side_bar collapsed">
-       <a class="hamburger-link">
-           <img src="../../../assets/icons/Hamburger.svg" alt="">
-       </a>
-        <action-menu>
+    <nav class="side_bar" class.bind="side_bar_expanded ? 'expanded' : ''">
+        <a class="hamburger-link" href="#" click.delegate="toggle_side_bar()">
+            <img src="../../../assets/icons/Hamburger.svg" alt="" if.bind="!side_bar_expanded">
+            <img src="../../../assets/icons/arrow.svg" alt="" if.bind="side_bar_expanded">
+        </a>
+        <action-menu></action-menu>
     </nav>
 </template>
