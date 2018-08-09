@@ -1,5 +1,5 @@
 @import '../styles/Settings/all';
 
 body {
-    padding: $app_header-height $side_bar-width;
+    padding: $app_header-height 0 0 $side_bar-width;
 }
