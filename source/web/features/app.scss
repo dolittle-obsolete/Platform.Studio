@@ -1,48 +1,11 @@
 @import '../styles/Settings/all';
 @import '../styles/Tools/all';
-
-.main-header {
-    @extend %flex-container-horizontal;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $color-brand-dark-blue;
-    height: 6rem;
-    padding: $grid-gutter/2 $grid-gutter;
-    h1 {
-        margin: 0;
-    }
+html,
+body {
+    height: 100%;
 }
 
 .main-content {
-    flex: 1 1 auto;
+    height: 100%;
 }
 
-.site-logo {
-    display: block;
-    position: fixed;
-    height: 8rem;
-    bottom: $grid-gutter;
-    right: $grid-gutter;
-    img,
-    svg {
-        max-height: 100%;
-        height: 100%;
-    }
-}
-
-.page-content {
-    padding: $grid-gutter;
-}
-
-.content-box {
-    background-color: #333;
-    padding: $grid-gutter;
-    margin: $grid-gutter;
-    box-shadow: .25rem .25rem 0 #232323;
-}
-
-.centered-app {
-    @extend %fixed-width-at-desktop;
-    margin: 0 auto;
-    padding: $grid-gutter;
-}

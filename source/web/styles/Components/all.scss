@@ -1,0 +1,7 @@
+@import '~dolittle.styles/src/styles/Components/all';
+.acrylic {
+    /*temporary until styles upgrade to 2.9.1*/
+    &::after {
+        background-color: $acrylic-bg-color;
+    }
+}
