@@ -1,28 +1,77 @@
 @import '../../../styles/Settings/all';
 @import '../../../styles/Tools/all';
 .application-page {
-    @extend %flex-container-vertical-center;
+    @extend %flex-container-vertical;
+    padding: $grid-gutter;
     > ul {
-        @extend %flex-container-horizontal-center;
+        @extend %flex-container-horizontal;
         flex-wrap: wrap;
         li {
+            border: 0.0625rem solid $color-gray-dark;
             display: block;
-            background-color: #f4f4f4;
+            flex: 0 1 18rem;
             margin: $grid-gutter;
-            flex: 0 1 15rem;
-        }
-        a {
-            display: block;
-            color: #444;
-            font-size: 2rem;
-            padding: $grid-gutter;
-            text-align: center;
-            &:hover {
-                outline: solid 0.125rem $color-brand-yellow;
+            transition: transform 0.3s ease-in-out;
+            > a {
+                display: block;
+                font-size: 2rem;
+                padding: $grid-gutter;
+                text-align: center;
+                color: #fff;
+            }
+            @include media-bp-min(desktop) {
+                &:hover {
+                    aside {
+                        transform: translateY(0);
+                    }
+                }
+            }
+            h3 {
+                margin-bottom: 0;
             }
         }
         figure {
-            padding: $grid-gutter * 2;
+            padding: $grid-gutter;
+        }
+        aside {
+            @extend %flex-container-horizontal;
+            justify-content: flex-start;
+            padding: $grid-gutter/4;
+            height: 3rem;
+            border-top: 0.0625rem solid $color-gray-dark;
+            > a {
+                padding: $grid-gutter/3;
+                &:last-child {
+                    margin-left: auto;
+                }
+            }
+            @include media-bp-min(desktop) {
+                background-color: rgba($color-gray-darkest, 0.9);
+                border-top: none;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 10;
+                transform: translateY(100%);
+                transition: transform 0.15s ease-in-out;
+            }
+        }
+        .environment-versions {
+            @extend %flex-container-horizontal;
+            border-top: 0.0625rem solid $color-gray-dark;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.625rem;
+            justify-content: space-between;
+            padding: $grid-gutter/4;
+            @include media-bp-min(desktop) {
+                height: 3.0625rem;
+                position: relative;
+                z-index: 1;
+                > div {
+                    padding: 0.625rem 0;
+                }
+            }
         }
     }
 }

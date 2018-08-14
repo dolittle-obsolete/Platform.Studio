@@ -5,6 +5,8 @@ body {
     background: #333 url($app-background-image) fixed center;
     background-size: cover;
     position: relative;
+    padding-top: $app_header-height;
+
     .acrylic {
         &::before {
             background: rgba(0, 0, 0, 0.01) url($app-background-image) fixed center;

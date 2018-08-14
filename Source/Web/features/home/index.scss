@@ -3,7 +3,10 @@
 
 .welcome {
     @extend %fixed-width-at-desktop;
-    min-height: 40vh;
-    margin: $grid-gutter*10 auto;
     padding: $grid-gutter * 2;
+    min-height: 100%;
+    @include media-bp-min(tablet) {
+        min-height: 40vh;
+        margin: $grid-gutter * 10 auto;
+    }
 }
