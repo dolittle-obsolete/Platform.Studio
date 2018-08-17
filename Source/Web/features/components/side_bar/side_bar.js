@@ -3,12 +3,13 @@ import { customElement, containerless, bindable } from 'aurelia-framework';
 @customElement('side-bar')
 @containerless()
 export class side_bar {
-    @bindable side_bar_expanded = false;
+    @bindable expanded = false;
     @bindable hide_trigger;
+    @bindable is_subnavigation;
     constructor() {
     }
     
     toggle_side_bar() {
-        this.side_bar_expanded = !this.side_bar_expanded;
+        this.expanded = !this.expanded;
     }
 }

@@ -1,5 +1,5 @@
 @import '../styles/style';
-/*app*/
+
 html,
 body {
     @extend %flex-container-vertical;
@@ -9,4 +9,6 @@ body {
 .main-content {
     height: 100%;
 }
-/*/app*/
+.page-with-sub-nav {
+    padding-left: $side_bar-expanded-width;
+}
