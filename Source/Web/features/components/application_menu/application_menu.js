@@ -1,6 +1,6 @@
 import {customElement, containerless} from 'aurelia-framework';
 
-@customElement('action-menu')
+@customElement('application-menu')
 @containerless
 export class action_menu {
 

@@ -1,6 +1,6 @@
 @import '../../../styles/Settings/all';
 
-.action-menu {
+.application-menu {
     nav {
         a {
             color: #fff;
@@ -13,15 +13,6 @@
             }
             span {
                 margin-left: $grid-gutter/2;
-            }
-        }
-    }
-    .expanded & {
-        nav {
-            a {
-                span {
-                    display: inline-block;
-                }
             }
         }
     }
