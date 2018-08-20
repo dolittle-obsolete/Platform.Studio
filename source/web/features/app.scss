@@ -1,11 +1,14 @@
-@import '../styles/Settings/all';
-@import '../styles/Tools/all';
+@import '../styles/style';
+
 html,
 body {
+    @extend %flex-container-vertical;
     height: 100%;
 }
 
 .main-content {
     height: 100%;
 }
-
+.page-with-sub-nav {
+    padding-left: $side_bar-expanded-width;
+}

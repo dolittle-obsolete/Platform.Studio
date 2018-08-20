@@ -1,5 +1,4 @@
 import { PLATFORM } from 'aurelia-pal';
-import style from '../styles/style.scss';
 
 export class app {
     constructor() {}
@@ -8,7 +7,8 @@ export class app {
         config.options.pushState = true;
         config.map([
             { route: ['', 'home'], name: 'index', moduleId: PLATFORM.moduleName('home/index'), layoutView: PLATFORM.moduleName('layout_landing.html') },
-            { route: 'applications', name: 'applications', moduleId: PLATFORM.moduleName('applications/index') },
+            { route: 'applications', name: 'applications', moduleId: PLATFORM.moduleName('applications/index'), layoutView: PLATFORM.moduleName('layout_landing.html') },
+            { route: 'build', name: 'build', moduleId: PLATFORM.moduleName('build/index') },
             { route: 'monitor', name: 'monitor', moduleId: PLATFORM.moduleName('monitor/index') }
         ]);
 

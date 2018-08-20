@@ -1,12 +1,15 @@
-import { customElement, containerless, observable } from 'aurelia-framework';
+import { customElement, containerless, bindable } from 'aurelia-framework';
 
 @customElement('side-bar')
 @containerless()
 export class side_bar {
-    @observable side_bar_expanded = false;
-    constructor() {}
-
+    @bindable expanded = false;
+    @bindable hide_trigger;
+    @bindable is_subnavigation;
+    constructor() {
+    }
+    
     toggle_side_bar() {
-        this.side_bar_expanded = !this.side_bar_expanded;
+        this.expanded = !this.expanded;
     }
 }
