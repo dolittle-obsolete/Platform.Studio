@@ -291,3 +291,5 @@ __pycache__/
 .DS_Store
 yarn.lock
 package-lock.json
+
+build/
