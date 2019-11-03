@@ -38,7 +38,9 @@
     "test:clean": "gulp test-clean --gulpfile node_modules/@dolittle/typescript.build.node/Gulpfile.js",
     "prepublishOnly": "yarn build && yarn test:run && yarn test:clean"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@dolittle/tooling.edge-studio": "1.0.0"
+  },
   "devDependencies": {
     "@dolittle/tooling.common.boilerplates": "8.*",
     "@dolittle/tooling.common.commands": "8.*",
