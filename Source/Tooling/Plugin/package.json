@@ -39,7 +39,7 @@
     "prepublishOnly": "yarn build && yarn test:run && yarn test:clean"
   },
   "dependencies": {
-    "@dolittle/tooling.edge-studio": "1.0.0"
+    "@dolittle/tooling.edge-studio": "1.0.1"
   },
   "devDependencies": {
     "@dolittle/tooling.common.boilerplates": "8.*",
