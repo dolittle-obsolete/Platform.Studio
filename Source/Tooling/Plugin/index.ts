@@ -5,7 +5,6 @@
 import {Plugin} from '@dolittle/tooling.common.plugins';
 import { plugin as edgePlugin } from '@dolittle/tooling.edge-studio';
 import {CommandGroupsProvider, CommandsProvider, NamespaceProvider} from './internal';
-const edgeApi = 'https://edge.dolittle.studio';
 
 export let commandGroupsProvider = new CommandGroupsProvider(edgePlugin.commandGroupsProvider.provide());
 
