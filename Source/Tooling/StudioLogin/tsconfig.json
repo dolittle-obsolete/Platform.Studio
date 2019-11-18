@@ -1,7 +1,7 @@
 {
     "extends": "./node_modules/@dolittle/typescript.build.node/TSConfig/tsconfig.base.json",
     "compilerOptions": {
-        "target": "es2015"
+        "target": "es6"
     }
   }
   
