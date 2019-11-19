@@ -28,6 +28,7 @@
     "package.json"
   ],
   "main": "Distribution/index.js",
+  "types": "Distribution/index.d.ts",
   "scripts": {
     "tasks": "gulp --tasks --gulpfile node_modules/@dolittle/typescript.build/Gulpfile.js",
     "clean": "gulp clean --gulpfile node_modules/@dolittle/typescript.build/Gulpfile.js",
@@ -38,7 +39,10 @@
     "prepublishOnly": "yarn build && yarn test:run && yarn test:clean"
   },
   "devDependencies": {
-    "@dolittle/typescript.build": "^5.0.0"
+    "@dolittle/tooling.common.configurations": "^8.0.1",
+    "@dolittle/tooling.common.utilities": "^8.0.1",
+    "@dolittle/typescript.build": "^5.0.1",
+    "@types/openid-client": "^3.7.0"
   },
   "dependencies": {
     "openid-client": "^3.8.3"
