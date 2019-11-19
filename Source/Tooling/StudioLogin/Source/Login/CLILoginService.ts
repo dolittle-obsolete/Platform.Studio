@@ -20,7 +20,7 @@ export class CLILoginService extends BaseLoginService {
      * @param {IContexts} contexts
      */
     constructor(contexts: IContexts) {
-        super('device', 'hello', 'opendid profile tenant', contexts);
+        super('device', 'hello', 'openid profile tenant', contexts);
     } 
 
     protected async authorize(client: Client, outputter: ICanOutputMessages) {
@@ -29,7 +29,7 @@ export class CLILoginService extends BaseLoginService {
             scope: this._scope
         });
 
-        outputter.print(`Please go to '${handle.verification_uri}', choose your auth provider and use the code '${handle.user_code}' to login`);
+        outputter.print(`Please go to '${handle.verification_uri}', choose your identity provider and use the code '${handle.user_code}' to login`);
         return handle.poll();
     }
     

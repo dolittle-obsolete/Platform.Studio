@@ -55,6 +55,7 @@ export class Contexts implements IContexts {
         let i = 0;
         while (this._contextsConfig.hasContext(name)) {
             name = `${standardName} - ${i.toString()}`;  
+            i++;
         }
         return name;
     }
