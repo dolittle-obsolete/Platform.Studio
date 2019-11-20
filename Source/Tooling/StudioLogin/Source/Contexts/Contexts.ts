@@ -34,10 +34,12 @@ export class Contexts implements IContexts {
     }
 
     rename(oldName: string, newName: string): void {
+        this._throwIfInvalidContextName(newName);
         this._contextsConfig.renameContext(oldName, newName);
     }
 
     renameCurrent(newName: string): void {
+        this._throwIfInvalidContextName(newName);
         this._contextsConfig.renameCurrent(newName);
     }
 
@@ -90,5 +92,8 @@ export class Contexts implements IContexts {
             i++;
         }
         return name;
+    }
+    private _throwIfInvalidContextName(contextName: string) {
+        if (!contextName) throw new Error(`'${contextName}' is an invalid name for a context`);
     }
 }
