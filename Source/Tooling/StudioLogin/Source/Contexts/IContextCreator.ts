@@ -15,12 +15,14 @@ export interface IContextCreator {
     /**
      * Creates a {Context}
      *
-     * @param {(string)} id_token
+     * @param {string} id_token
+     * @param {number} expires_at
      * @param {string} sub Subject ID
-     * @param {(string)} name Name of the subject
-     * @param {(string)} tid Tenant ID
-     * @param {(string)} tenant_name 
+     * @param {string} name Name of the subject
+     * @param {string} tid Tenant ID
+     * @param {string} tenant_name 
+     * @param {string} [refresh_token]
      * @returns {Context}
      */
-    create(id_token: string, sub: string, name: string, tid: string, tenant_name: string): Context
+    create(id_token: string, expires_at: number, sub: string, name: string, tid: string, tenant_name: string, refresh_token?: string): Context
 }

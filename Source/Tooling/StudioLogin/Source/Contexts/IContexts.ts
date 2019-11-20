@@ -67,14 +67,16 @@ export interface IContexts {
     /**
      * Adds a new {Context}
      *
-     * @param {(string)} id_token
+     * @param {string} id_token
+     * @param {string} expires_at
      * @param {string} sub Subject ID
-     * @param {(string)} name Name of the subject
-     * @param {(string)} tid Tenant ID
-     * @param {(string)} tenant_name
+     * @param {string} name Name of the subject
+     * @param {string} tid Tenant ID
+     * @param {string} tenant_name
+     * @param {string} [refresh_token]
      * @returns {Context} The added {Context}
      */
-    createAndAdd(id_token: string, sub: string, name: string, tid: string, tenant_name: string): Context
+    createAndAdd(id_token: string, expires_at: number, sub: string, name: string, tid: string, tenant_name: string, refresh_token?: string): Context
 
     /**
      * Deletes a {Context} by its name
@@ -89,4 +91,20 @@ export interface IContexts {
      *
      */
     clear(): void
+
+    /**
+     * Gets whether the context has expired
+     *
+     * @param {Context} context
+     * @returns {boolean}
+     */
+    contextHasExpired(context: Context): boolean
+
+    /**
+     * Gets whether the context with the given name has expired
+     *
+     * @param {string} contextName
+     * @returns {boolean}
+     */
+    hasExpired(contextName: string): boolean
 }

@@ -84,7 +84,9 @@ export abstract class BaseLoginService implements ILoginService {
         let client = this.clientFrom(issuer);
         let tokens = await this.authorize(client, outputter);
         let userInfo = await client.userinfo(tokens);
-
-        this._contexts.createAndAdd(tokens.id_token!, userInfo.sub, userInfo.name!, (userInfo as any).tid, (userInfo as any).tenant_name);
+        console.log(tokens);
+        console.log(userInfo);
+        tokens.id
+        this._contexts.createAndAdd(tokens.id_token!, tokens.expires_at!, userInfo.sub, userInfo.name!, (userInfo as any).tid, (userInfo as any).tenant_name, tokens.refresh_token);
     }
 }

@@ -18,6 +18,21 @@ export type Context = {
      * @type {string}
      */
     token: string,
+    
+    /**
+     * The epoch time when the token expires
+     *
+     * @type {number}
+     */
+    expiresAt: number,
+
+    /**
+     * The optional refresh token 
+     *
+     * @type {string}
+     */
+    refreshToken?: string, 
+    
     /**
      * The user information
      *

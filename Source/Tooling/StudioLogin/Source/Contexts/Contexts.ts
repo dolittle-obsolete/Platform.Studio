@@ -2,6 +2,7 @@
 *  Copyright (c) Dolittle. All rights reserved.
 *  Licensed under the MIT License. See LICENSE in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
+import {TokenSet} from 'openid-client';
 import { Context, IContexts, IContextCreator, ContextsConfiguration, contextEquals } from '../index';
 
 /**
@@ -68,8 +69,8 @@ export class Contexts implements IContexts {
         return this._contextsConfig.contexts;
     }
     
-    createAndAdd(id_token: string, sub: string, name: string, tid: string, tenant_name: string) {
-        let context = this._contextCreator.create(id_token, sub, name, tid, tenant_name);
+    createAndAdd(id_token: string, expires_at: number, sub: string, name: string, tid: string, tenant_name: string, refresh_token?: string) {
+        let context = this._contextCreator.create(id_token, expires_at, sub, name, tid, tenant_name, refresh_token);
 
         this.add(context);
         return context;
@@ -95,5 +96,14 @@ export class Contexts implements IContexts {
     }
     private _throwIfInvalidContextName(contextName: string) {
         if (!contextName) throw new Error(`'${contextName}' is an invalid name for a context`);
+    }
+
+    contextHasExpired(context: Context) {
+        return new TokenSet({expires_at: context.expiresAt}).expired();
+    }
+    
+    hasExpired(contextName: string) {
+        let context = this.get(contextName);
+        return this.contextHasExpired(context);
     }
 }
