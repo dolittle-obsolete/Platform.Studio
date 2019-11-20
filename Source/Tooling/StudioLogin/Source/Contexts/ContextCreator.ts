@@ -2,16 +2,16 @@
 *  Copyright (c) Dolittle. All rights reserved.
 *  Licensed under the MIT License. See LICENSE in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
-import { Context, IContextsCreator } from '../../index';
+import { Context, IContextCreator } from '../index';
 
 /**
  * Represents an implementation of {IContextsCreator}
  *
  * @export
- * @class ContextsCreator
+ * @class ContextCreator
  * @implements {IContextsCreator}
  */
-export class ContextsCreator implements IContextsCreator {
+export class ContextCreator implements IContextCreator {
     
     create(id_token: string, sub: string, name: string, tid: string, tenant_name: string) {
         if (!id_token) throw new Error('Missing id_token');
@@ -24,7 +24,7 @@ export class ContextsCreator implements IContextsCreator {
             token: id_token,
             userInfo: {
                 name,
-                subjectId: sub,
+                subjectID: sub,
                 tenantID: tid,
                 tenantName: tenant_name,
             }

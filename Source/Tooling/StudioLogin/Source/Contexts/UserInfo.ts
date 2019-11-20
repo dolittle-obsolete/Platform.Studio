@@ -12,7 +12,7 @@ export type UserInfo = {
      *
      * @type {string}
      */
-    subjectId: string,
+    subjectID: string,
     /**
      * The full name
      *

@@ -2,15 +2,15 @@
 *  Copyright (c) Dolittle. All rights reserved.
 *  Licensed under the MIT License. See LICENSE in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
-import { Context } from '../../index';
+import { Context } from '../index';
 
 /**
  * Defines a system that can create a {Context} configuration
  *
  * @export
- * @interface IContextsCreator
+ * @interface IContextCreator
  */
-export interface IContextsCreator {
+export interface IContextCreator {
     
     /**
      * Creates a {Context}

@@ -3,7 +3,7 @@
 *  Licensed under the MIT License. See LICENSE in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
 import { UserCacheConfig } from '@dolittle/tooling.common.configurations';
-import { Context } from '../../index';
+import { Context } from '../index';
 
 /**
  * Represents a dictionary of {Context}
@@ -63,6 +63,20 @@ export class ContextsConfiguration extends UserCacheConfig<string | ContextsObje
         let obj = this.store;
         (obj.contexts as ContextsObject)[contextName] = context;
         this.store = obj;
+    }
+
+    renameContext(oldName: string, newName: string) {
+        if (!this.hasContext(oldName)) throw new Error(`No context with name '${oldName}'`);
+        if (this.hasContext(newName)) throw new Error(`A context with name '${newName}' already exists`);
+
+        let context = this.contexts[oldName];
+        this.addContext(newName, context);
+        this.delete(oldName);
+    }
+
+    renameCurrent(newName: string) {
+        this.renameContext(this.currentContext, newName);
+        this.currentContext = newName;
     }
 
     deleteContext(contextName: string) {
