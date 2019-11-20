@@ -2,18 +2,17 @@
 *  Copyright (c) Dolittle. All rights reserved.
 *  Licensed under the MIT License. See LICENSE in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
-import { Command, CommandContext, IFailedCommandOutputter } from "@dolittle/tooling.common.commands";
-import { ILoginService } from '@dolittle/tooling.common.login';
+import { CommandContext, IFailedCommandOutputter, AuthenticatedCommand } from "@dolittle/tooling.common.commands";
+import { ILoginService, IContexts } from '@dolittle/tooling.common.login';
 import { IDependencyResolvers } from "@dolittle/tooling.common.dependencies";
 import { ICanOutputMessages, IBusyIndicator } from "@dolittle/tooling.common.utilities";
-import { performLogin } from './internal';
 
-export class LoginCommand extends Command {
+export class AuthenticatedCommandTest extends AuthenticatedCommand {
     
-    constructor(private _loginService: ILoginService) {
-        super('login', 'Logs in to the dolittle studio', false)
+    constructor(loginService: ILoginService, contexts: IContexts) {
+        super(loginService, contexts,'auth-test', 'tset', false)
     }
     async onAction(commandContext: CommandContext, dependencyResolvers: IDependencyResolvers, failedCommandOutputter: IFailedCommandOutputter, outputter: ICanOutputMessages, busyIndicator: IBusyIndicator) {
-        await performLogin(this._loginService, outputter, busyIndicator);
+        outputter.print('Should be successfully authenticated');
     }
 }

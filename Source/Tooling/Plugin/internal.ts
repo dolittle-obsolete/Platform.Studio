@@ -8,6 +8,7 @@ export * from './NamespaceProvider';
 
 export * from './performLogin';
 export * from './LoginCommand';
+export * from './AuthenticatedCommandTest';
 
 export * from './Contexts/contextsObjectToString';
 export * from './Contexts/currentContextToContextsObject';

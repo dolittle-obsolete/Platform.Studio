@@ -3,7 +3,7 @@
 *  Licensed under the MIT License. See LICENSE in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
 import { Command, CommandContext, IFailedCommandOutputter } from "@dolittle/tooling.common.commands";
-import { IContexts } from '@dolittle/studio-login';
+import { IContexts } from '@dolittle/tooling.common.login';
 import { IDependencyResolvers } from "@dolittle/tooling.common.dependencies";
 import { ICanOutputMessages, IBusyIndicator } from "@dolittle/tooling.common.utilities";
 import { contextsObjectToString } from "../internal";

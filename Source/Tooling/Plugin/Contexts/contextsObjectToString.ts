@@ -2,7 +2,7 @@
 *  Copyright (c) Dolittle. All rights reserved.
 *  Licensed under the MIT License. See LICENSE in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
-import { ContextsObject } from '@dolittle/studio-login'
+import { ContextsObject } from '@dolittle/tooling.common.login'
 
 export function contextsObjectToString(contexts: ContextsObject) {
     let contextsAndNames = Object.keys(contexts).map(_ => {
