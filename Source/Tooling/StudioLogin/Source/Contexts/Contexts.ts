@@ -52,6 +52,9 @@ export class Contexts implements IContexts {
         else {
             let contextName = this._createContextName(context);
             this._contextsConfig.addContext(contextName, context);
+            if (this._contextsConfig.numContexts === 1) {
+                this.use(contextName);   
+            }
         }
     }
 

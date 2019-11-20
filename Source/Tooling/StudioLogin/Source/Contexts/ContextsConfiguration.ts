@@ -46,6 +46,10 @@ export class ContextsConfiguration extends UserCacheConfig<string | ContextsObje
     clear() {
         this.store = ContextsConfiguration.DEFAULT;
     }
+
+    get numContexts() {
+        return Object.keys(this.contexts).length;
+    }
     
     get currentContext() {
         return this.get('currentContext') as string;
