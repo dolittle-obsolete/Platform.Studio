@@ -1,6 +1,0 @@
-Distribution
-node_modules
-*.d.ts
-package-lock.json
-yarn.lock
-*.tgz
