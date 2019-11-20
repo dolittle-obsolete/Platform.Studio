@@ -4,11 +4,24 @@
 *--------------------------------------------------------------------------------------------*/
 import {Plugin} from '@dolittle/tooling.common.plugins';
 import { plugin as edgePlugin } from '@dolittle/tooling.edge-studio';
-import {CommandGroupsProvider, CommandsProvider, NamespaceProvider} from './internal';
+import {CommandGroupsProvider, CommandsProvider, NamespaceProvider, LoginCommand, ContextsCommandGroup, ListContextsCommand, CurrentContextCommand} from './internal';
+import { loginService, contexts } from '@dolittle/studio-login';
 
-export let commandGroupsProvider = new CommandGroupsProvider(edgePlugin.commandGroupsProvider.provide());
+let edgePluginCommands = edgePlugin.commandsProvider.provide();
+let edgePluginCommandGroups = edgePlugin.commandGroupsProvider.provide();
+let edgePluginNamespaces = edgePlugin.namespaceProvider.provide();
 
-export let commandsProvider = new CommandsProvider(edgePlugin.commandsProvider.provide());
-export let namespaceProvider = new NamespaceProvider(edgePlugin.namespaceProvider.provide());
+export let commandGroupsProvider = new CommandGroupsProvider([
+    new ContextsCommandGroup([
+        new ListContextsCommand(contexts),
+        new CurrentContextCommand(contexts)
+    ])
+]);
+export let commandsProvider = new CommandsProvider([
+    new LoginCommand(loginService)
+]);
+export let namespaceProvider = new NamespaceProvider([
+
+]);
 
 export let plugin = new Plugin(commandsProvider, commandGroupsProvider, namespaceProvider);

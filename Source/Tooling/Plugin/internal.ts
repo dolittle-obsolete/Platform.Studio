@@ -5,3 +5,12 @@
 export * from './CommandGroupsProvider';
 export * from './CommandsProvider';
 export * from './NamespaceProvider';
+
+export * from './performLogin';
+export * from './LoginCommand';
+
+export * from './Contexts/contextsObjectToString';
+export * from './Contexts/currentContextToContextsObject';
+export * from './Contexts/ContextsCommandGroup';
+export * from './Contexts/ListContextsCommand';
+export * from './Contexts/CurrentContextCommand';

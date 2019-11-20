@@ -39,6 +39,7 @@
     "prepublishOnly": "yarn build && yarn test:run && yarn test:clean"
   },
   "dependencies": {
+    "@dolittle/studio-login": "file:/Users/woksin/.nvm/versions/node/v12.4.0/lib/node_modules/@dolittle/studio-login",
     "@dolittle/tooling.edge-studio": "1.0.1"
   },
   "devDependencies": {
