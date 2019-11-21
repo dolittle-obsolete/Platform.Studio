@@ -6,7 +6,6 @@ import { Command, CommandContext, IFailedCommandOutputter } from "@dolittle/tool
 import { ILoginService } from '@dolittle/tooling.common.login';
 import { IDependencyResolvers } from "@dolittle/tooling.common.dependencies";
 import { ICanOutputMessages, IBusyIndicator } from "@dolittle/tooling.common.utilities";
-import { performLogin } from './internal';
 
 export class LoginCommand extends Command {
     
@@ -14,6 +13,7 @@ export class LoginCommand extends Command {
         super('login', 'Logs in to the dolittle studio', false)
     }
     async onAction(commandContext: CommandContext, dependencyResolvers: IDependencyResolvers, failedCommandOutputter: IFailedCommandOutputter, outputter: ICanOutputMessages, busyIndicator: IBusyIndicator) {
-        await performLogin(this._loginService, outputter, busyIndicator);
+        await this._loginService.login(dependencyResolvers, outputter, busyIndicator);
+
     }
 }
