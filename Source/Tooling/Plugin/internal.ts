@@ -7,4 +7,3 @@ export * from './CommandsProvider';
 export * from './NamespaceProvider';
 
 export * from './LoginCommand';
-export * from './AuthenticatedCommandTest';
